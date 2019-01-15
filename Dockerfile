@@ -1,5 +1,5 @@
-FROM continuumio/miniconda3
-
-RUN conda install -y opencv matplotlib && pip install pytesseract imutils && apt update && apt install -y tesseract-ocr
+FROM ubuntu:18.04
+RUN apt-get update && apt-get install -y curl aptitude python3.6 tesseract-ocr python3-pip
+RUN pip3 install opencv-python matplotlib pytesseract imutils
 
 
